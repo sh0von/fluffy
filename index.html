@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will you be my Valentine?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff69b4;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+    .btn:hover {
+      background-color: #ff4b9e;
+    }
+    .no-btn {
+      background-color: #ff7aa4;
+    }
+    .no-btn.clicked {
+      transform: scale(1.1);
+    }
+    .yes-btn {
+      background-color: #ffbdd8;
+    }
+    .yes-btn.enlarge {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Will you be my Valentine?</h1>
+  <button class="btn yes-btn" onclick="yesClicked()">Yes</button>
+  <button class="btn no-btn" onclick="noClicked()">No</button>
+  
+  <script>
+    function yesClicked() {
+      alert("Yay! You said Yes! Happy Valentine's Day! ❤️");
+    }
+
+    function noClicked() {
+      var noBtn = document.querySelector('.no-btn');
+      var yesBtn = document.querySelector('.yes-btn');
+      
+      noBtn.classList.add('clicked');
+      yesBtn.classList.add('enlarge');
+      yesBtn.textContent = "Please be mine 🥺";
+      
+      // Continuously enlarge the "Yes" button
+      setTimeout(function() {
+        yesBtn.classList.remove('enlarge');
+        yesBtn.classList.add('enlarge');
+      }, 500);
+    }
+  </script>
+</body>
+</html>
