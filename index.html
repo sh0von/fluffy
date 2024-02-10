@@ -9,7 +9,10 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5f5f5;
       text-align: center;
-      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     h1 {
       color: #ff69b4;
@@ -45,9 +48,11 @@
   </style>
 </head>
 <body>
-  <h1>Will you be my Valentine?</h1>
-  <button class="btn yes-btn" onclick="yesClicked()">Yes</button>
-  <button class="btn no-btn" onclick="noClicked()">No</button>
+  <div>
+    <h1>Will you be my Valentine?</h1>
+    <button class="btn yes-btn" onclick="yesClicked()">Yes</button>
+    <button class="btn no-btn" onclick="noClicked()">No</button>
+  </div>
   
   <script>
     function yesClicked() {
